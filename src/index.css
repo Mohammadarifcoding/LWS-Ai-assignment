@@ -7,6 +7,8 @@
 
 body {
   font-family: 'Satoshi', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a0b2e 100%);
+  color: white;
 }
 
 .bg-primary {
