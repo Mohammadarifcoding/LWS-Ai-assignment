@@ -8,7 +8,6 @@ const SelectSize = () => {
         {label : "16:9", height: 768, width: 1280 },
         {label : "4:3", height: 1024, width: 768 },
         {label : "3:2", height: 768, width: 1024 },
-
     ]
     return (
     <div>

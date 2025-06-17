@@ -1,6 +1,6 @@
 import React from 'react';
-import image from '/src/assets/images/ai-image-6.jpeg';
-const ImageCard = () => {
+
+const ImageCard = ({image}) => {
     return (
          <div className="image-card rounded-xl overflow-hidden cursor-pointer relative">
               <div className="absolute bottom-2 right-2  p-1 ">

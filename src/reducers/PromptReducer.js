@@ -5,6 +5,10 @@ export const initialState = {
     height: 1024,
     model: 'turbo',
   },
+  response: {
+    data: [],
+    isLoading: false
+  },
 };
 
 export const PromptReducer = (state, action) => {
@@ -20,22 +24,30 @@ export const PromptReducer = (state, action) => {
         setting: action.payload,
       };
     case 'UPDATE_SIZE':
-        return {
-            ...state,
-            setting: {
-                ...state.setting,
-                width: action.payload.width,
-                height: action.payload.height
-            }
-        }
+      return {
+        ...state,
+        setting: {
+          ...state.setting,
+          width: action.payload.width,
+          height: action.payload.height,
+        },
+      };
     case 'SET_MODEL':
-        return {
-            ...state,
-            setting: {
-                ...state.setting,
-                model: action.payload
-            }
-        }
+      return {
+        ...state,
+        setting: {
+          ...state.setting,
+          model: action.payload,
+        },
+      };
+    case 'SET_RESPONSE':
+      return {
+        ...state,
+        response: {
+          ...state.response,
+          data: action.payload,
+        },
+      };
     default:
       return state;
   }
