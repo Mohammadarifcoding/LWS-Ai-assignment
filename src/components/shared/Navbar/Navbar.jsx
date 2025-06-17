@@ -1,9 +1,7 @@
 import React from 'react';
 import logo from '/src/assets/logo.svg';
-import { getImageByPrompt } from '../../../utils/Prompt';
 const Navbar = ({ pageChange, page }) => {
-    const image = getImageByPrompt("a beautiful girl")
-    console.log(image)
+
   const navLink = [
     {
       name: 'Create Image',

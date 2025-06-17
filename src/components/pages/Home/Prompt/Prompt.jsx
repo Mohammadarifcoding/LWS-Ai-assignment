@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Search from './Search/Search';
 import SettingPrompt from './SettingPrompt/SettingPrompt';
+import { PromptContext } from '../../../../context';
 
 const Prompt = () => {
+    const {state,dispatch} = useContext(PromptContext)
+     console.log(state)
     return (
         <div>
-            <Search/>
+            <Search />
             <SettingPrompt/>
         </div>
     );

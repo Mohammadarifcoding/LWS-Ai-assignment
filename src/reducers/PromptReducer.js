@@ -1,0 +1,34 @@
+export const initialState = {
+  prompt: '',
+  setting: {
+    width: 1024,
+    height: 1024,
+    model: 'turbo',
+  },
+};
+
+export const PromptReducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_PROMPT':
+      return {
+        ...state,
+        prompt: action.payload,
+      };
+    case 'SET_SETTING':
+      return {
+        ...state,
+        setting: action.payload,
+      };
+    case 'UPDATE_SIZE':
+        return {
+            ...state,
+            setting: {
+                ...state.setting,
+                width: action.payload.width,
+                height: action.payload.height
+            }
+        }
+    default:
+      return state;
+  }
+};
