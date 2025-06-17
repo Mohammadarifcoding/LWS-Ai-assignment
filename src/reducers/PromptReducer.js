@@ -28,6 +28,14 @@ export const PromptReducer = (state, action) => {
                 height: action.payload.height
             }
         }
+    case 'SET_MODEL':
+        return {
+            ...state,
+            setting: {
+                ...state.setting,
+                model: action.payload
+            }
+        }
     default:
       return state;
   }
