@@ -1,5 +1,5 @@
 
-import { getImageByPrompt } from './Prompt';
+import { getImageByPrompt,getResult } from './Prompt';
 
 
-export {getImageByPrompt}
+export {getImageByPrompt,getResult}

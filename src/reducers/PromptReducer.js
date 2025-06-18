@@ -48,6 +48,14 @@ export const PromptReducer = (state, action) => {
           data: action.payload,
         },
       };
+    case 'SET_LOADING':
+      return {
+        ...state,
+        response: {
+          ...state.response,
+          isLoading: action.payload,
+        },
+      };
     default:
       return state;
   }

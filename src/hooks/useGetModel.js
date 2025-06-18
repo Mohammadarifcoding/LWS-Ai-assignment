@@ -1,9 +1,9 @@
-import React, { useEffect, useReducer, useState } from 'react';
-import { initialState, PromptReducer } from '../reducers/PromptReducer';
+import React, { useContext, useEffect, useState } from 'react';
+import { PromptContext } from '../context';
 
 const useGetModel = () => {
   const [models, setModels] = useState([]);
-  const [state, dispatch] = useReducer(PromptReducer, initialState);
+  const { dispatch } = useContext(PromptContext);
 
   useEffect(() => {
     let ignore = true;

@@ -18,13 +18,14 @@ const App = () => {
   };
   return (
     <PromptProvider>
-
 <div className="container mx-auto px-4 py-8 max-w-6xl">
       <Navbar pageChange={handleChangePage} page={page} />
       <Glow />
       {page == 'create' && <Home />}
       {page == 'download' && <DownloadPage />}
     </div>
+
+
 
     </PromptProvider>
     

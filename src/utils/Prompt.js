@@ -1,3 +1,9 @@
+export const getResult = async (prompt,setting) => {
+  const data = await Promise.all([getImageByPrompt(prompt,setting), getImageByPrompt(prompt,setting)]);
+  return data
+
+}
+
 export const getImageByPrompt = async (prompt,setting) => {
 const params = {
   width: setting.width || 1024,

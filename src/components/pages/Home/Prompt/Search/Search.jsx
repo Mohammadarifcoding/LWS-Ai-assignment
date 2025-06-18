@@ -7,6 +7,7 @@ const Search = () => {
 
     const {state,dispatch} = useContext(PromptContext)
     const [prompt,setPrompt] = useState("")
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
