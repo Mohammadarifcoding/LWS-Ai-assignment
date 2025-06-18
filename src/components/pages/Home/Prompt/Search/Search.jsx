@@ -1,9 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { PromptContext } from '../../../../../context';
-import { getImageByPrompt } from '../../../../../utils';
+import { getImageByPrompt, getResult } from '../../../../../utils';
 
 const Search = () => {
-
 
     const {state,dispatch} = useContext(PromptContext)
     const [prompt,setPrompt] = useState("")
@@ -15,11 +14,8 @@ const handleSubmit = async (e) => {
   dispatch({ type: 'SET_LOADING', payload: true });
 
   try {
-    const randomImages = await Promise.all([
-      getImageByPrompt(prompt, state.setting),
-      getImageByPrompt(prompt, state.setting),
-    ]);
-
+    const randomImages = await getResult(prompt, state.setting);
+   console.log("Random image",randomImages)
     dispatch({ type: 'SET_RESPONSE', payload: randomImages });
   } catch (error) {
     console.error('Image fetch failed:', error);

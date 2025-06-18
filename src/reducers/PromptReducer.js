@@ -7,7 +7,7 @@ export const initialState = {
   },
   response: {
     data: [],
-    isLoading: false
+    isLoading: false,
   },
 };
 

@@ -3,7 +3,6 @@ import { PromptContext } from '../../../../../../context';
 
 const ModelInput = () => {
     const {model,dispatch,state} = useContext(PromptContext)
-
     return (
     <div>
       <label htmlFor="model" className="block text-sm font-medium text-zinc-700 mb-1">Model</label>
