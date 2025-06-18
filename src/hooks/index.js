@@ -1,5 +1,4 @@
+import { useDownloadImage } from './useDownload';
+import { GetModels } from './../utils/GetModels';
 
-import useGetModel from './useGetModel';
-
-
-export {useGetModel}
+export { GetModels, useDownloadImage };

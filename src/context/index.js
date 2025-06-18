@@ -1,6 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
-const PromptContext = createContext('')
+const PromptContext = createContext('');
 
-
-export {PromptContext}
+export { PromptContext };

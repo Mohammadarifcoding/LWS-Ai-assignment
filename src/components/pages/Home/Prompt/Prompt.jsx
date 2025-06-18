@@ -4,14 +4,14 @@ import SettingPrompt from './SettingPrompt/SettingPrompt';
 import { PromptContext } from '../../../../context';
 
 const Prompt = () => {
-    const {state,dispatch} = useContext(PromptContext)
-    console.log(state)
-    return (
-        <div>
-            <Search />
-            <SettingPrompt/>
-        </div>
-    );
+  const { state, dispatch } = useContext(PromptContext);
+  console.log(state);
+  return (
+    <div>
+      <Search />
+      <SettingPrompt />
+    </div>
+  );
 };
 
 export default Prompt;

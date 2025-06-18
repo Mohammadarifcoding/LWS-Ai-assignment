@@ -6,16 +6,15 @@ import { getResult } from '../../../utils';
 import { PromptContext } from '../../../context';
 
 const Home = () => {
-    const {state,dispatch} = useContext(PromptContext)
+  const { state, dispatch } = useContext(PromptContext);
 
   return (
     <div>
       <h2 className="text-4xl font-bold mb-8">
         Let's create a masterpiece, Arif! <span class="text-2xl">👋</span>
       </h2>
-      <Prompt/>
-      <Result/>
-
+      <Prompt />
+      <Result />
     </div>
   );
 };

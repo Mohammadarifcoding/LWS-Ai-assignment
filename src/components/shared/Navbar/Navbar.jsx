@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '/src/assets/logo.svg';
 const Navbar = ({ pageChange, page }) => {
-
   const navLink = [
     {
       name: 'Create Image',
