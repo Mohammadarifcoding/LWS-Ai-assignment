@@ -15,7 +15,7 @@ const ModelInput = () => {
         className="w-full px-3 py-2 bg-zinc-900/10 border border-zinc-700/70 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
       >
         {model.map((m) => (
-          <option key={m} className="bg-zinc-900" value={m} selected>
+          <option key={m} className="bg-zinc-900" value={m}>
             {m.charAt(0).toUpperCase() + m.slice(1)}
           </option>
         ))}

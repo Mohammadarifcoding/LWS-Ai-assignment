@@ -9,6 +9,9 @@ export const initialState = {
     data: [],
     isLoading: false,
   },
+  downloadImages:[
+
+  ]
 };
 
 export const PromptReducer = (state, action) => {
@@ -56,6 +59,11 @@ export const PromptReducer = (state, action) => {
           isLoading: action.payload,
         },
       };
+    case 'SET_DOWNLOAD_IMAGES':
+      return {
+        ...state,
+        downloadImages: [...state.downloadImages, action.payload],
+      }
     default:
       return state;
   }

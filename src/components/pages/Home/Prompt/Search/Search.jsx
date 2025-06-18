@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { PromptContext } from '../../../../../context';
 import { getImageByPrompt, getResult } from '../../../../../utils';
+import { FaSpinner } from 'react-icons/fa';
+import { IoSend } from 'react-icons/io5';
 
 const Search = () => {
   const { state, dispatch } = useContext(PromptContext);
@@ -44,6 +46,7 @@ const Search = () => {
         </div>
         <input
           onChange={(e) => setPrompt(e.target.value)}
+          onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
           type="text"
           placeholder="Create with Prompts"
           className="outline-none w-full py-4 px-2 bg-transparent text-white placeholder-zinc-400 text-lg"
@@ -52,13 +55,11 @@ const Search = () => {
           onClick={handleSubmit}
           className="bg-zinc-800 hover:bg-zinc-700 transition-colors p-4 mr-1 rounded-full"
         >
-          <svg
-            className="w-6 h-6 text-white transform rotate-90"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-          </svg>
+                 {state.response?.isLoading ? (
+                   <FaSpinner className="h-5 w-5 animate-spin text-white" />
+                 ) : (
+                   <IoSend className="h-5 w-5 text-white" />
+                 )}
         </button>
       </div>
     </div>

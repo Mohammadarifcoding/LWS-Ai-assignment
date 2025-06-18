@@ -21,7 +21,7 @@ const SettingPrompt = () => {
           <input
             type="number"
             id="seed"
-            disabled="true"
+            disabled={true}
             className="w-full bg-zinc-900/10 px-3 py-2 border border-zinc-700/70 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
             placeholder="Random"
           />
