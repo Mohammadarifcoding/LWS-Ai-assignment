@@ -4,7 +4,7 @@ import { useDownloadImage } from './../../../hooks/useDownload';
 import { FaSpinner } from 'react-icons/fa';
 import { MdOutlineFileDownload } from 'react-icons/md';
 import { PromptContext } from '../../../context';
-import { useLocalStorage } from '../../../../../weather website/src/hooks/useLocalStorage';
+import { useLocalStorage } from './../../../hooks/useLocalStorage';
 
 const ImageCard = ({ image }) => {
   const download = useDownloadImage();
@@ -38,6 +38,11 @@ const ImageCard = ({ image }) => {
         className="absolute bottom-2 right-2 p-2 bg-white rounded-md shadow transition-opacity"
         disabled={loading}
       >
+        {loading ? (
+          <FaSpinner className="animate-spin" />
+        ) : (
+          <MdOutlineFileDownload />
+        )}
       </button>
       <img src={image}  alt="Abstract art" className="w-full h-auto bg-black/20" />
     </div>

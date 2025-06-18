@@ -1,21 +1,21 @@
 import { useEffect, useReducer, useState } from 'react';
 import { initialState, PromptReducer } from '../reducers/PromptReducer';
 import { PromptContext } from '../context';
-import { getResult } from '../utils';
-import { GetModels } from '../hooks/useGetModel';
+import { useGetModel } from '../hooks';
+
+
 
 const PromptProvider = ({ children }) => {
   const [state, dispatch] = useReducer(PromptReducer, initialState);
   const [model, setModel] = useState([]);
-
+  const models = useGetModel();
   //    dispatch({ type: 'SET_MODEL', payload: model[0] });
   useEffect(() => {
     let ignore = false;
 
     const getAllModel = async () => {
       if (ignore) return;
-      console.log('This function running');
-      const modeldata = await GetModels();
+      const modeldata = await models();
       setModel([...modeldata]);
       dispatch({ type: 'SET_MODEL', payload: modeldata[0] });
     };

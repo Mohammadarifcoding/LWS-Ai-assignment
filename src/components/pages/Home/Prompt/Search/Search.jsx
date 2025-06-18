@@ -16,7 +16,6 @@ const Search = () => {
 
     try {
       const randomImages = await getResult(prompt, state.setting);
-      console.log('Random image', randomImages);
       dispatch({ type: 'SET_RESPONSE', payload: randomImages });
     } catch (error) {
       console.error('Image fetch failed:', error);

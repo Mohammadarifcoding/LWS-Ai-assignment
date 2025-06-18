@@ -8,13 +8,11 @@ import PromptProvider from './provider/PromptProvider';
 const App = () => {
   const [page, setPage] = useState('create');
   const handleChangePage = () => {
-    console.log('Hello');
     if (page == 'create') {
       setPage('download');
       return;
     }
     setPage('create');
-    console.log(page);
   };
   return (
     <PromptProvider>

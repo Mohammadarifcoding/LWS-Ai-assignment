@@ -5,7 +5,6 @@ const Result = () => {
   const { state } = useContext(PromptContext);
   const { isLoading, data } = state.response || {};
   const hasImages = Array.isArray(data) && data.length > 0;
-  console.log(state.response);
   return (
     <div>
       <h3 className="text-zinc-200 mb-4 font-bold text-lg">Result</h3>

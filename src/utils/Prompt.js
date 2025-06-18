@@ -8,8 +8,6 @@ export const getResult = async (prompt, setting) => {
     getImageByPrompt(prompt, setting),
   ]);
 
-  console.log(data);
-  console.log('Can you help me');
 
   return data;
 };
